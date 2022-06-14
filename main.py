@@ -15,7 +15,7 @@ df = df.sort_values(["label"], ascending = True)    # sort all entries by their 
 print("\nprint gemstones' types and their count:\n")
 print(df.loc[:, "label"].value_counts())
 
-df = df.groupby('label').filter(lambda x : len(x) > 100)    # drop all rows that have label names' frequencies less than 100
+df = df.groupby('label').filter(lambda x : len(x) > 10)    # drop all rows that have label names' frequencies less than 100
 
 print("\n\n\nUnique Labels: \n")
 print(pd.unique(df["label"]))       # print out all unique labels in the data frame
